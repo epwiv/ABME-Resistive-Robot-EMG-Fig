@@ -4,7 +4,7 @@
 %enter the target trials that you are trying to plot
 targetTrials = [1,2,3,4];
 targetTrials = [2,6,7,8];
-cond = 2;
+cond = 2; %should be 2 or 1 based on which group you want to process
 numberSubjs = 7;
 
 %window size for aligning trials (these work for the resistive robot fig
