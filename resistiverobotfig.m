@@ -223,7 +223,7 @@ for k = 1:size(muscle,2)
         set(AX(2),'XLim',[0,100],'FontName','Arial','FontSize',12,'FontWeight','bold','LineWidth',2,'YLim',newY,'Ytick',linspace(newY(1),newY(2),6),'YColor','w','Xtick',xlab,'Xticklabel',{},'Tickdir','in','XAxisLocation','bottom')
 
         %set(AX(1),'visible','off')
-        alpha(H1,.2) %Changes the transparency of the bars in the plot
+        alpha(H1,.8) %Changes the transparency of the bars in the plot
 
     end
         
