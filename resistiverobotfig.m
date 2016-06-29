@@ -22,12 +22,12 @@ k = 7;
 for k = 1:size(muscle,2)
     
     %load the file
-    cd '/Users/epeter/Dropbox/papers/resistive robot paper/EMG Postprocess Unaligned'
+    cd 'C:\Users\E. Peter Washabaugh\Google Drive\Papers\Completed\Resistive Robot Paper\Resistive Robot Paper\EMG Postprocess Unaligned'
     
     file = ['Ensemble_',muscle{k},'_EMG.txt'];
     Data = importdata(file);
     
-    cd '/Users/epeter/Documents/MATLAB'
+    cd 'C:\Users\E. Peter Washabaugh\Documents\GitHub\ABME-Resistive-Robot-EMG-Fig'
     
     %works to switch trials 6 and 7 so they are in ascending order
     for i = 6:10:66;
@@ -152,11 +152,7 @@ for k = 1:size(muscle,2)
     for i = 1:5-1
         cog(i+1,:) = cog(i+1,:)+.2*i;
     end
-        
-    %most distinguishable color scheme
-    func = @(x) colorspace('RGB->Lab',x);
-    col = distinguishable_colors(8,'w',func);
-    
+
     %set(gca,'ColorOrder',colorset)
     hold all
     
@@ -225,9 +221,9 @@ for k = 1:size(muscle,2)
         
         set(AX(1),'XLim',[0,100],'FontName','Arial','FontSize',12,'FontWeight','bold','LineWidth',2,'YLim',newY,'Ytick',linspace(newY(1),newY(2),6),'Xtick',[25,75],'Xticklabel',{'Avg Stance','Avg Swing'},'TickLength',[0 0],'Tickdir','out','XAxisLocation','bottom')
         set(AX(2),'XLim',[0,100],'FontName','Arial','FontSize',12,'FontWeight','bold','LineWidth',2,'YLim',newY,'Ytick',linspace(newY(1),newY(2),6),'YColor','w','Xtick',xlab,'Xticklabel',{},'Tickdir','in','XAxisLocation','bottom')
-        pH = arrayfun(@(x) allchild(x),H1);
-        set(pH,'FaceAlpha',0.8);
+
         %set(AX(1),'visible','off')
+        alpha(H1,.2) %Changes the transparency of the bars in the plot
 
     end
         
